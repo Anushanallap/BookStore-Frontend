@@ -30,19 +30,7 @@
         </div>
       </form>
       <form [formGroup]="formGroup" (ngSubmit)="onVerify()" *ngIf="forgotpass">
-        <div class="example-container " >
-          <mat-form-field class="mat-form-field-infix"  appearance="outline">
-            <mat-label>Enter your email</mat-label>
-               <input matInput placeholder="pat@example.com" formControlName="username" required>
-             </mat-form-field>
-    
-            <mat-form-field style="width: 450px;" appearance="outline">
-                <mat-label>Enter New password</mat-label>
-                <input type="password" matInput  formControlName="password">
-          </mat-form-field><br><br>
-          <button type="submit" class="btn btn-primary btn-lg login-button ">SUBMIT</button><br><br>
-        
-        </div>
+       
       </form>
     </div>
       <br>
