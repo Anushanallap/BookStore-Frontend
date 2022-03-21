@@ -1,0 +1,65 @@
+.card {
+    text-align: center;
+    background: white;
+}
+
+.container {
+    justify-content: center;
+    width: 40%;
+    margin: auto;
+    //margin-top: 5%;
+    border: 1px solid rgb(67, 113, 238);
+}
+
+
+.head{
+    font-family: emoji;
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(67, 113, 238);
+}
+
+.otp{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mobile-text {
+    color: #989696b8;
+    font-size: 15px
+}
+
+.form-control {
+    margin-right: 10px;
+    height: 30px;
+    width: 200px;
+    text-align: center;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+}
+
+.cursor {
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #A03037;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  
+.navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: emoji;
+  }

@@ -1,0 +1,59 @@
+.container{
+    border: solid #5659da 1px;
+    justify-content: center;
+    width: 30%;
+    margin-left: 20%;
+}
+.mat-form-field {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    width: 51%;
+    background-image: image(\Users\anush\Angular\BookStore_Frontend\src\assets);
+}
+
+.head{
+    font-family: emoji;
+    font-weight: bolder;
+    color: #425dd1;
+}
+
+.button{
+    width: 51%;
+    padding: 15px;
+    background: transparent;
+    cursor: pointer;
+}
+.navbar {
+    width: 100%;
+    background-color: #A03037;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .navbar a {
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: emoji;
+  }
+
+
+  .signup-button{
+    width: 51%;
+    height: 45px;
+   //background: #557ef0;
+    color: rgb(67, 113, 238);
+   // border: blue 1px;
+    cursor: pointer;
+    border-radius: blue 5px;
+  }
+
+  .signup-button:hover{
+   background: #557ef0;
+    color: white;
+   
+  }

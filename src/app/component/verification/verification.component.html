@@ -1,0 +1,30 @@
+<header>
+    <div class="navbar">
+        <img src="/assets/education.svg" style="margin-left: 30px; ">
+        <a class="active" href="#">BOOK STORE</a>
+      </div>
+</header> 
+<body style="padding: 5%;">
+
+    <form [formGroup]="verifyUser">
+     <div style="padding: 5%;">  
+    <div class="d-flex justify-content-center align-items-center container">
+        <div class="card py-5 px-3">
+            <h2 class="m-0 head">MAIL-ID VERIFICATION</h2><span class="mobile-text">Enter the code send to your email Id <b class="text-danger">{{email}}</b></span>
+            <div class="d-flex mt-5 otp">
+                <input type="text" class="form-control" autofocus="" formControlName="OTP" (change) = "verify()" >
+                <!-- <input type="text" class="form-control" formControlName="d2"> -->
+                <!-- <input type="text" class="form-control" formControlName="d3"> -->
+                <!-- <input type="text" class="form-control" formControlName="d4">
+                <input type="text" class="form-control" formControlName="d5"> -->
+                <!-- <input type="text" class="form-control" formControlName="d6" (change) = "verify()"> -->
+            </div>
+            <div class="text-center mt-5" style="margin-bottom: 20px;">
+                <span class="d-block mobile-text">Did not receive the code?</span>
+                <span class="font-weight-bold text-danger cursor">Resend</span>
+            </div>
+        </div>
+    </div>
+</div> 
+    </form>
+    </body>
