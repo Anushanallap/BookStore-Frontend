@@ -56,6 +56,12 @@ export class CartComponent implements OnInit {
     })
   }
 
+/**
+ * This function is called when the user clicks the Place Order button. 
+ * It calls the placeOrder() function of the orderService and passes the formGroup value to it. 
+ * It then sets the orderId to the returned orderId and sets the checkout and continue variables to
+ * false
+ */
   onSubmit(){
     this.orderService.placeOrder(this.formGroup.value).subscribe(data => {
       this.orderId = data.data.order_id;
@@ -65,6 +71,9 @@ export class CartComponent implements OnInit {
     this.continue = ! this.continue
  
   }
+/**
+ * This function is used to get all the carts from the database
+ */
 
   onReload(){
     this.cartService.getAllCarts(this.token).subscribe(data => {this.carts = data})
@@ -78,12 +87,19 @@ export class CartComponent implements OnInit {
     this.cartService.removeFromCart(cart_id).subscribe(data => this.onReload());
     
   }
+ /* This is used to show and hide the customer details form. */
   custDetails = false;
   onPlaceOrder(){
     this.custDetails = !this.custDetails
     this.initForm();
   }
 
+ /**
+  * This function is used to increase the quantity of a book in the cart
+  * @param {number} cart_id - The id of the cart that you want to change the quantity of.
+  * @param {number} quantity - number
+  * @param {number} book_id - the id of the book that was added to the cart
+  */
   plus(cart_id: number, quantity: number, book_id:number){
     if(this.bookQuantity != 0){
       this.cartService.changeQuantity(cart_id, quantity+1).subscribe(data => this.onReload());
@@ -92,6 +108,12 @@ export class CartComponent implements OnInit {
     
   }
 
+ /**
+  * This function is used to decrease the quantity of a book in the cart
+  * @param {number} cart_id - The id of the cart that you want to change the quantity of.
+  * @param {number} quantity - number
+  * @param {number} book_id - the id of the book that was added to the cart
+  */
   minus(cart_id: number, quantity: number, book_id:number){
     if(quantity != 0 ){
       this.cartService.changeQuantity(cart_id, quantity-1).subscribe(data =>{this.onReload();});
@@ -100,11 +122,17 @@ export class CartComponent implements OnInit {
     } 
   }
 
+ /**
+  * This function changes the quantity of a book in the database
+  * @param {number} book_id - The id of the book that you want to change the quantity of.
+  * @param {number} quantity - number
+  */
   changeBookQuantity(book_id: number, quantity: number){
     this.bookService.changeBookQuantity(book_id, quantity).subscribe(data =>{
       this.bookQuantity = data.data.quantity
     })
   }
+/* This is used to show and hide the customer details form. */
 
   continue = false;
   checkout = false;
@@ -113,6 +141,9 @@ export class CartComponent implements OnInit {
     this.continue = !this.continue
   }
 
+  /**
+   * Remove all items from the cart
+   */
   onRemoveAll(){
     this.cartService.removeAllCarts().subscribe()
   

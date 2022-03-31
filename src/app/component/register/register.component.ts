@@ -7,13 +7,19 @@ import { UserService } from 'src/app/service/user.service';
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
-})
+})/* The RegisterComponent class is a component that is used to register a new user. */
+
 export class RegisterComponent implements OnInit {
 
   registerForm!: FormGroup;
   verifyUser!: FormGroup;
   constructor(private formBuilder: FormBuilder, private userService: UserService, private router:Router) { }
 
+/**
+ * This function is called when the component is initialized. 
+ * It creates a form group and adds the form controls to it. 
+ * It also sets the validators for the form controls
+ */
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
       first_name: ['', Validators.required],

@@ -4,13 +4,20 @@ import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
-})
+})/* The UserService class is a class that has a constructor and a method. */
+
 export class UserService {
 
 
   private url = "http://localhost:8282/user";
   constructor(private http: HttpClient) { }
 
+ /**
+  * It sends a post request to the server with the email and password.
+  * @param {string} email - The email of the user.
+  * @param {string} psw - the password of the user
+  * @returns An Observable of type any.
+  */
   
   userLogin(email:string, psw:string): Observable<any>{
     const params = new HttpParams()

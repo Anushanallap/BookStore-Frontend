@@ -1,3 +1,4 @@
+/* This class is a model for a book. */
 export class Book {
 
     book_id!: number;

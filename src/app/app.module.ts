@@ -22,6 +22,7 @@ import { HomeComponent } from './component/home/home.component';
 import { CartComponent } from './component/cart/cart.component';
 import { FeedbackComponent } from './component/feedback/feedback.component';
 import { ForgotpasswordComponent } from './component/forgotpassword/forgotpassword.component';
+import { WelcomeComponent } from './component/welcome/welcome.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { ForgotpasswordComponent } from './component/forgotpassword/forgotpasswo
     HomeComponent,
     CartComponent,
     FeedbackComponent,
-    ForgotpasswordComponent
+    ForgotpasswordComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

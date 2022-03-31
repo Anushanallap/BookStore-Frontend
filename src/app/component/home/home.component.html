@@ -15,21 +15,20 @@
     <label style="margin-left: 30px; font-size:x-large;">Books</label ><br>
     <span style="margin-top: 10px; color: rgb(141, 145, 148); margin-left: 5px;">({{books.length}} Items)</span>
     <div class="dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Dropdown button
+      <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Sort by relevance
       </button>
-      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <button class="dropdown-item" type="button" (click)="Onsort(1)">Price: High to Low</button>
+        <button class="dropdown-item" type="button" (click)="Onsort(2)">Price: Low to High </button>
+        <button class="dropdown-item" type="button" (click)="Onsort(3)">Newest Arival</button>
       </div>
+
     </div>
-  </div>
-  
-  
+  </div> 
   <div class="row1">
     <br style="margin-left: 30px;">
-    <div class="card" style="width: 15rem; " *ngFor = "let book of books">
+    <div class="card" style="width: 11rem; " *ngFor = "let book of books">
       <img class="card-img-top" src={{book.logo}} alt="Card image cap">
       <div class="card-body">
         <div style="line-height: 15px;">
@@ -42,7 +41,7 @@
           
         </div>
         <!-- <p class="card-text">{{book.description}}</p> -->
-        <p class="card-text" style="color: black;"><b>Rs.{{book.price}}</b></p>
+        <p class="card-text" style="color: rgb(124, 120, 120);"><b>Rs.{{book.price}}</b></p>
         
         <div *ngIf = "!bookIdLIst.includes(book.book_id) && book.quantity != 0; else loggedOut" >
           <button style="background-color: brown; border: brown;"  class="card-link btn btn-primary btn-sm"  (click) = "addToCart(book.book_id)">ADD TO CART</button>
